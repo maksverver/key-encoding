@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Key Encoding Demo</title>
+</head>
+<link rel="stylesheet" href="key-encode.css" />
+
+<body>
+  <h1>Key Encoding Demo</h1>
+  <p>A human-readable base-32 encoding of binary numbers.
+  Useful for product keys and the like. More information:
+  <a href="https://github.com/maksverver/key-encoding/">https://github.com/maksverver/key-encoding/</a>.
+  <h2>Encode</h2>
+  <p>
+    <b>Input:</b> (hexadecimal)<br>
+    <input type="text" size="100" id="base16input" pattern="[0-9A-Fa-f]*" placeholder="1337c0de42"><br>
+    <b>Output:</b> (base-32)<br>
+    <input type="text" size="100" id="base32output" readonly><br>
+  </p>
+
+  <h2>Decode</h2>
+  <p>
+    <b>Input:</b> (base-32 encoded)<br>
+    <input type="text" size="100" id="base32input" placeholder="22222-YYYYY-77777"><br>
+    <b>Output:</b> (hexadecimal)<br>
+    <input type="text" size="100" id="base16output" readonly><br>
+  </p>
+
+  <h2>Variant</h2>
+  <p>
+    <select id="variant-alphabet">
+      <option value="uppercase" default>Uppercase</option>
+      <option value="lowercase">Lowercase</option>
+    </select>
+    <select id="variant-checked">
+      <option value="true" default>With check digits</option>
+      <option value="false">Without check digits</option>
+    </select>
+    <select id="variant-grouped">
+      <option value="true" default>With grouping</option>
+      <option value="false">Without grouping</option>
+    </select>
+  </p>
+
+  <script src="key-encode.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+body {
+	background: white;
+	color: black;
+	font: 12pt sans-serif;
+}
+
+input[type="text"] {
+	font: 12pt monospace;
+}
+
+input:invalid, input.invalid {
+	background: red
+}
