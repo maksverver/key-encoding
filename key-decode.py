@@ -26,8 +26,9 @@ def DecodeGroup(group):
 	if CalculateCrc5(digits) != check:
 		print('Invalid group "{}": CRC failed.'.format(group))
 		return None
+	result = 0
 	for digit in digits:
-		result += (result << 5) | digit
+		result = (result << 5) | digit
 	return result
 
 print('Enter base-32 codes, one per line.')
